@@ -1,0 +1,793 @@
+/* 字體 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+body {
+    background-image: url(../images/petbg.png);
+    cursor: url(../images/cursor.png), pointer;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/* 讓置頂鍵會自然滾動 */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* 浮動主選單_監聽(.active配合JS) */
+.menu_pc a.active {
+    background-color: #FCCAA4;
+    color: #4F2D27;
+}
+
+
+/* 置頂鍵 */
+#scrolltop {
+    display: none !important;
+    position: fixed;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffff;
+    bottom: 50px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 100px;
+    z-index: 9999;
+}
+
+/* PC導覽列 */
+.open {
+    position: fixed;
+    top: 60px;
+    right: -50px;
+    z-index: 1;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    writing-mode: vertical-lr;
+    padding: 14px 8px;
+    color: #FFFFFF;
+    background-color: #000000;
+    border-radius: 14px 0px 0px 14px;
+    cursor: pointer;
+}
+
+.open:hover {
+    background-color: #4F2D27;
+}
+
+.menu_pc {
+    color: #FFFFFF;
+    position: fixed;
+    top: 80px;
+    right: 0px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.menu_pc .close {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.menu_pc .close p {
+    color: #FFFFFF;
+    width: 40px;
+    height: 40px;
+    background-color: #4F2D27;
+    line-height: 40px;
+    border-radius: 50px;
+}
+
+
+
+.menu_pc li a {
+    font-family: 'Noto Sans TC';
+    margin: auto;
+    text-align: center;
+    max-width: 115px;
+    max-height: 45px;
+    padding: 12px 0px;
+    background-color: #4F2D27;
+    margin-bottom: 2px;
+    display: block;
+}
+
+.menu_pc li a:hover {
+    background-color: #FCCAA4;
+    color: #4F2D27;
+
+}
+
+.menu_pc ul a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.menu_pc .top a {
+    border-radius: 0px 0px 10px 10px;
+}
+
+
+
+/* 浮動主選單_手機 */
+.menu_MB {
+    display: none;
+    width: 100%;
+    margin: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+    z-index: 2;
+    position: fixed;
+    bottom: 0px;
+}
+
+.menu_MB ul {
+    display: flex;
+}
+
+
+.menu_MB ul li a {
+    display: inline-block;
+    width: 60px;
+    margin: 0px 1px;
+    padding: 10px 20.5px;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #4F2D27;
+    border-radius: 20px 20px 0px 0px;
+}
+
+
+.menu_MB ul li a:hover {
+    background-color: #FCCAA4;
+    color: #4F2D27;
+}
+
+
+
+
+
+
+/* 主視覺 */
+.kv {
+    text-align: center;
+}
+
+.kv img {
+    width: 100%;
+    max-width: 1280px;
+}
+
+/* 寵的就是你 */
+.gift {
+    max-width: 1059px;
+    margin: auto;
+}
+
+.gift {
+    margin-top: 5%;
+    text-align: center;
+}
+
+.gift .title img {
+    width: 100%;
+    max-width: 610.08px;
+}
+
+.gift .container img {
+    width: 100%;
+}
+
+
+
+/* 限時特賣 */
+.sales {
+    margin-top: 7%;
+    text-align: center;
+
+}
+
+.gift .title img {
+    width: 100%;
+    max-width: 650.88px;
+}
+
+.sales .container {
+    max-width: 1059px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #FDF0DC;
+}
+
+.sales .container .item {
+    flex-basis: 50%;
+}
+
+.sales .container .item img {
+    width: 98%;
+    transition: transform 0.8s;
+}
+
+
+.sales .container .item img:hover {
+    transform: scale(1.1);
+}
+
+
+/* 喵星人主食區 */
+.food_cat {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.cat_title,
+.dog_title {
+    text-align: center;
+    margin-top: 7%;
+    margin-bottom: 2%;
+}
+
+.cat_title img {
+    width: 100%;
+    max-width: 650.88px;
+}
+
+
+
+/* 喵星人主食區_選單區 */
+.food_cat .brand {
+    padding: 18px;
+    border-radius: 12px;
+    background: #FDF0DC;
+    justify-content: center;
+    background-image: repeating-linear-gradient(44deg, #f28c6e, #f28c6e 7px, transparent 7px, transparent 11px, #f28c6e 11px), repeating-linear-gradient(134deg, #f28c6e, #f28c6e 7px, transparent 7px, transparent 11px, #f28c6e 11px), repeating-linear-gradient(224deg, #f28c6e, #f28c6e 7px, transparent 7px, transparent 11px, #f28c6e 11px), repeating-linear-gradient(314deg, #f28c6e, #f28c6e 7px, transparent 7px, transparent 11px, #f28c6e 11px);
+    background-size: 3px 100%, 100% 3px, 3px 100%, 100% 3px;
+    background-position: 0 0, 0 0, 100% 0, 0 100%;
+    background-repeat: no-repeat;
+}
+
+
+/* 讓最後一排靠左 */
+.icon-H {
+    visibility: hidden;
+}
+
+
+
+
+
+
+
+.food_cat .icon {
+    margin-bottom: 14px;
+}
+
+
+.food_cat .icon img {
+    width: 100%;
+    transition: transform 0.3s;
+
+}
+
+.food_cat .icon:hover img {
+    transform: scale(0.9);
+
+
+}
+
+
+
+
+
+
+
+/* 喵星人主食區_卡片區 */
+.food_cat .list {
+    max-width: 777px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.food_cat .list .card {
+    padding: 10px;
+    text-align: center;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    flex-basis: calc(33.33% - 16px);
+    box-sizing: border-box;
+    background-image: repeating-linear-gradient(44deg, #f28c6e, #f28c6e 7px, transparent 7px, transparent 11px, #f28c6e 11px), repeating-linear-gradient(134deg, #f28c6e, #f28c6e 7px, transparent 7px, transparent 11px, #f28c6e 11px), repeating-linear-gradient(224deg, #f28c6e, #f28c6e 7px, transparent 7px, transparent 11px, #f28c6e 11px), repeating-linear-gradient(314deg, #f28c6e, #f28c6e 7px, transparent 7px, transparent 11px, #f28c6e 11px);
+    background-size: 3px 100%, 100% 3px, 3px 100%, 100% 3px;
+    background-position: 0 0, 0 0, 100% 0, 0 100%;
+    background-repeat: no-repeat;
+}
+
+
+
+.food_cat .list .card .pic img,
+.health ul .card .pic img,
+.daily ul .card .pic img {
+    width: 100%;
+}
+
+.food_cat .card h5,
+.health .card h5,
+.daily .card h5 {
+    font-family: 'Noto Sans TC';
+    font-weight: 500;
+    color: #4F2D27;
+    height: 32px;
+
+
+}
+
+
+.food_cat .card .tag,
+.health .card .tag,
+.daily .card .tag {
+    border-radius: 50px;
+    background: #4F2D27;
+    color: #FFFFFF;
+    padding: 10px;
+    text-align: center;
+    margin: 10px 0px;
+    font-family: 'Noto Sans TC';
+}
+
+.food_cat .list .card:hover .tag,
+.health .card:hover .tag,
+.daily .card:hover .tag {
+    background-color: #F28C6E;
+}
+
+.food_cat .list .card:hover h5,
+.health .card:hover h5,
+.daily .card:hover h5 {
+    color: #F28C6E;
+}
+
+
+.food_cat .card .money,
+.health .card .money,
+.daily .card .money {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin-bottom: 16px;
+    font-family: 'Roboto';
+
+}
+
+.food_cat .card .price,
+.health .card .price,
+.daily .card .price {
+    text-decoration: line-through;
+    font-size: 14px;
+    color: #828282;
+}
+
+.food_cat .card .sale,
+.health .card .sale,
+.daily .card .sale {
+    font-size: 26px;
+    color: #F28C6E;
+    font-weight: 700;
+}
+
+
+/* 汪星人主食區 */
+.dog_title img {
+    width: 100%;
+    max-width: 610.08px;
+}
+
+
+
+
+/* 保健食品 */
+.health .title {
+    text-align: center;
+    margin-top: 7%;
+    margin-bottom: 2%;
+}
+
+.health .title img {
+    width: 100%;
+    max-width: 650.4px;
+}
+
+
+.health ul {
+    max-width: 985px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    gap: 10px;
+}
+
+.health ul .card {
+    padding: 10px;
+    text-align: center;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    flex-basis: calc(25% - 16px);
+    box-sizing: border-box;
+    background-image: repeating-linear-gradient(44deg, #f28c6e, #f28c6e 7px, transparent 7px, transparent 11px, #f28c6e 11px), repeating-linear-gradient(134deg, #f28c6e, #f28c6e 7px, transparent 7px, transparent 11px, #f28c6e 11px), repeating-linear-gradient(224deg, #f28c6e, #f28c6e 7px, transparent 7px, transparent 11px, #f28c6e 11px), repeating-linear-gradient(314deg, #f28c6e, #f28c6e 7px, transparent 7px, transparent 11px, #f28c6e 11px);
+    background-size: 3px 100%, 100% 3px, 3px 100%, 100% 3px;
+    background-position: 0 0, 0 0, 100% 0, 0 100%;
+    background-repeat: no-repeat;
+}
+
+
+/* 日常用品 */
+.daily {
+    max-width: 1016px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 7%;
+}
+
+.daily .cat img,
+.daily .dog img {
+    width: 100%;
+}
+
+.daily ul {
+    max-width: 798px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.daily ul .card {
+    padding: 10px;
+    text-align: center;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    flex-basis: calc(50% - 16px);
+    box-sizing: border-box;
+    background-image: repeating-linear-gradient(44deg, #f28c6e, #f28c6e 7px, transparent 7px, transparent 11px, #f28c6e 11px), repeating-linear-gradient(134deg, #f28c6e, #f28c6e 7px, transparent 7px, transparent 11px, #f28c6e 11px), repeating-linear-gradient(224deg, #f28c6e, #f28c6e 7px, transparent 7px, transparent 11px, #f28c6e 11px), repeating-linear-gradient(314deg, #f28c6e, #f28c6e 7px, transparent 7px, transparent 11px, #f28c6e 11px);
+    background-size: 3px 100%, 100% 3px, 3px 100%, 100% 3px;
+    background-position: 0 0, 0 0, 100% 0, 0 100%;
+    background-repeat: no-repeat;
+}
+
+
+/* 快來帶我回家吧 */
+.adotp {
+    margin-top: 4%;
+    text-align: center;
+}
+
+.adotp a:hover {
+    cursor: url(../images/cursor.png), pointer;
+}
+
+.adotp .title img {
+    width: 100%;
+    max-width: 598.08px;
+}
+
+
+
+.adotp .container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background-color: #FDF0DC;
+    padding: 32px;
+    max-width: 1100px;
+    border-radius: 12px;
+    background-image: repeating-linear-gradient(44deg, #f28c6e, #f28c6e 7px, transparent 7px, transparent 11px, #f28c6e 11px), repeating-linear-gradient(134deg, #f28c6e, #f28c6e 7px, transparent 7px, transparent 11px, #f28c6e 11px), repeating-linear-gradient(224deg, #f28c6e, #f28c6e 7px, transparent 7px, transparent 11px, #f28c6e 11px), repeating-linear-gradient(314deg, #f28c6e, #f28c6e 7px, transparent 7px, transparent 11px, #f28c6e 11px);
+    background-size: 3px 100%, 100% 3px, 3px 100%, 100% 3px;
+    background-position: 0 0, 0 0, 100% 0, 0 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.adotp .cat {
+    margin-bottom: 3%;
+}
+
+
+.adotp .swiper-prev1,
+.adotp .swiper-prev2 {
+    position: absolute;
+    left: -20px;
+    top: 45%;
+    z-index: 2;
+}
+
+.adotp .swiper-next1,
+.adotp .swiper-next2 {
+    position: absolute;
+    right: -20px;
+    top: 45%;
+    z-index: 2;
+}
+
+
+.adotp .container .mySwiper {
+    max-width: 1059px;
+}
+
+
+.adotp a {
+    text-decoration: none;
+}
+
+
+.adotp .container .card {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    padding: 12px;
+    max-width: 240px;
+
+}
+
+.adotp .container .card .pic {
+    position: relative;
+}
+
+
+
+
+.adotp .container .card .pic img {
+    width: 100%;
+}
+
+.adotp .card .pic .style {
+    width: 86%;
+    display: flex;
+    padding: 12px 16px;
+    align-items: center;
+    justify-content: space-between;
+    color: #FFFFFF;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    font-family: 'Noto Sans TC';
+}
+
+.adotp .card .style h5 {
+    font-size: 12px;
+}
+
+.adotp .card .pic .style img {
+    width: 100%;
+    max-width: 24px;
+}
+
+
+
+.adotp .card .number {
+    font-size: 14px;
+    color: #4F2D27;
+    font-family: 'Roboto';
+    word-break: break-all;
+    margin-top: 10px;
+}
+
+.adotp .card p {
+    font-size: 12px;
+    color: #4F2D27;
+    font-family: 'Noto Sans TC';
+    margin: 10px 0px;
+    /* 省略溢出文 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.adotp .card .tel {
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #4F2D27;
+    font-size: 13px;
+    color: #FFFFFF;
+}
+
+.adotp .card:hover .tel {
+    background-color: #F28C6E;
+
+}
+
+
+/* footer */
+footer .pic {
+    margin-bottom: -10px;
+    padding: 0px 16px;
+}
+
+footer img {
+    width: 100%;
+    max-width: 1227px;
+}
+
+
+footer p {
+    text-align: center;
+    background-color: #F28C6E;
+    color: #FFFFFF;
+    padding: 16px 0px;
+    font-family: 'Noto Sans TC';
+    text-align: center;
+
+}
+
+
+
+@media screen and (max-width:1200px) {
+
+    body {
+        background-image: url(../images/petbg1200.png);
+    }
+
+    /* 快來帶我回家吧 */
+    .adotp .swiper-prev1,
+    .adotp .swiper-next1,
+    .adotp .swiper-prev2,
+    .adotp .swiper-next2 {
+        display: none;
+    }
+
+}
+
+
+
+@media screen and (max-width:767px) {
+
+    body {
+        background-size: 99%;
+    }
+
+    /* 寵的就是你 */
+    .gift .title img,
+    .sales .title img,
+    .cat_title img,
+    .dog_title img,
+    .adotp .title img {
+        width: 90%;
+    }
+
+    .gift .container {
+        margin: 0px 16px;
+    }
+
+
+
+    /* 喵星人主食區 */
+    .food_cat {
+        flex-direction: column;
+        margin: 0px 16px;
+    }
+
+    .food_cat .brand {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 8px;
+        padding: 8px;
+        margin-bottom: 12px;
+    }
+
+    .food_cat .brand .icon {
+        flex-basis: calc(33.33% - 10px);
+        margin-bottom: 0px;
+
+    }
+
+    .food_cat .list {
+        justify-content: space-between;
+
+    }
+
+    .food_cat .list .card,
+    .health ul .card {
+        flex-basis: calc(50% - 6px);
+    }
+
+
+
+
+    /* 保健食品 */
+    .health {
+        margin: 0 16px;
+    }
+
+
+    /* 日常用品 */
+    .daily {
+        flex-wrap: wrap;
+
+    }
+
+    /* 快來帶我回家吧！ */
+    .adotp .container {
+        margin: 4% 16px;
+    }
+
+
+
+
+
+}
+
+
+@media screen and (max-width:576px) {
+
+    /* 置頂鍵 */
+    #scrolltop {
+        display: block !important;
+    }
+
+    .menu_pc {
+        display: none;
+    }
+
+    .menu_MB {
+        display: block;
+    }
+
+    /* 快來帶我回家吧！ */
+    .adotp .card .number {
+        height: 28px;
+    }
+
+
+    /* footer */
+    footer p {
+        height: 50px;
+
+    }
+
+    footer .pic {
+        margin-bottom: -6px;
+
+    }
+}
+
+
+@media screen and (max-width:375px) {
+
+    /* 限時特賣 */
+    .sales .container .item {
+        flex-basis: 100%;
+    }
+
+    .sales .container {
+        margin: 0px 16px;
+    }
+
+
+
+
+
+
+}
