@@ -8,6 +8,8 @@ body {
     background-attachment: fixed;
 }
 
+
+/* 解決移動裝置藍色畫面 */
 html,
 body {
     -webkit-tap-highlight-color: transparent;
