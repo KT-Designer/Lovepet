@@ -9,7 +9,7 @@ body {
 }
 
 
-/* 解決移動裝置藍色畫面 */
+/* 解決移動裝置藍色畫面，原因多半是自訂游標的關係*/
 html,
 body {
     -webkit-tap-highlight-color: transparent;
