@@ -763,9 +763,17 @@ footer p {
     }
 
     /* 快來帶我回家吧！ */
+    .adotp .container {
+        padding: 16px;
+    }
+
     .adotp .card .number {
         height: 28px;
     }
+
+
+
+
 
 
     /* footer */
