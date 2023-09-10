@@ -8,6 +8,11 @@ body {
     background-attachment: fixed;
 }
 
+html,
+body {
+    -webkit-tap-highlight-color: transparent;
+}
+
 
 /* 讓置頂鍵會自然滾動 */
 html {
